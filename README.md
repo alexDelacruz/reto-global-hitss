@@ -5,7 +5,7 @@ Crear un solo servicio REST POST que inserte 1 producto el cual será enviado en
 
 - [Instalación](#instalación)
 - [Configuración](#configuración)
-- [Prueba](#prueba)
+- [Pruebas](#pruebas)
 - [Autor](#Autor)
 ## Instalación
 
@@ -24,10 +24,13 @@ jdbc.username=admin
 jdbc.password=@Admin24
 ```
 
-## Prueba
+## Pruebas 
+### Con swagger
 En el navegador ingresa a la ruta del swagger
 ```bash
 http://localhost:8100/swagger-ui/index.html
 ```
+### Junit
+En el paquete test se encuentra las pruebas unitarias con Junit, clase ProjectApplicationTests
 ## Autor
 Alex De la Cruz Guillermo

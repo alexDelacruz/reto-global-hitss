@@ -19,7 +19,8 @@ BEGIN
         OPEN p_resultado FOR
             SELECT id,nombre, fecharegistro
             FROM productos
-            WHERE nombre IS NULL OR (nombre LIKE '%' || p_nombre || '%');
+            WHERE (nombre IS NULL OR (nombre LIKE '%' || p_nombre || '%'))
+            AND (p_fecha IS NULL OR TO_DATE(fecharegistro)=p_fecha);
         IF p_resultado%ISOPEN THEN
             p_codigo := 0;
         ELSE
